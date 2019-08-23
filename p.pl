@@ -11,7 +11,6 @@ my $function = $ffi->function(
     'gsl_root_fdfsolver_alloc',
     [ 'gsl_root_fdfsolver_type_ptr' ] => 'opaque'
 );
-my $alloc = $ffi->find_symbol('gsl_root_fdfsolver_alloc');
 my $solver_type = $ffi->find_symbol('gsl_root_fdfsolver_newton');
 my $solver = $function->call( $solver_type );
 
